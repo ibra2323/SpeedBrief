@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car News - Stay Updated with the Latest Trends</title>
+    <title>Latest Automotive News</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         /* CSS starts here */
@@ -14,85 +14,131 @@
             font-family: 'Open Sans', sans-serif;
         }
 
+        /* Body Styling */
         body {
             color: #ddd;
             line-height: 1.6;
             background-color: #111;
         }
 
+        /* Header Styling */
         header {
+            background: #0d1117;
+            color: #58a6ff;
+            padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
-            background: #0d1117;
-            color: #58a6ff;
-            padding: 1rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-sizing: border-box;
             z-index: 1000;
         }
 
+        /* Navbar Styling */
         .navbar {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            flex-grow: 1;
+            padding: 0 2rem;
         }
 
-        .navbar-links a, .logo, .page-flipper {
+        .navbar-links a {
             color: #58a6ff;
             text-decoration: none;
-            padding: 0 15px;
+            margin: 0 15px;
             transition: color 0.3s ease;
         }
 
-        .navbar-links a:hover, .logo:hover, .page-flipper:hover {
+        /* Logo Styling with Special Effects */
+        .logo {
+            font-size: 24px;
+            color: #58a6ff;
+            text-shadow: 0 0 8px rgba(88, 166, 255, 0.7);
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
             color: #ff7b72;
         }
 
-        .hero {
-            background: url('websiteimage.jpg') no-repeat center center/cover;
-            color: #fff;
-            padding: 2rem;
-            text-align: center;
-            margin-top: 60px; /* Offset for the fixed header */
+        /* Page Flipper Styling */
+        .page-flipper {
+            padding: 5px 10px;
+            font-size: 14px;
+            color: #58a6ff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
+        .page-flipper:hover {
+            background-color: #ff7b72;
+            color: white;
+        }
+
+        /* Main Content Styling */
+        main {
+            padding-top: 70px;
+        }
+
+        /* News Section Styling */
         .news-section {
             padding: 2rem;
             background: #161b22;
         }
 
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
+        .news-item {
+            background: #1c2028;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .ad iframe {
-            border: 3px solid #58a6ff;
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
+        .news-item h3 {
+            color: #58a6ff;
+        }
+
+        .news-item p {
+            color: #ccc;
+        }
+
+        .news-item a {
+            background: #58a6ff;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .news-item a:hover {
+            background: #ff7b72;
+        }
+
+        /* Footer Styling */
         footer {
             background: #0d1117;
             color: #58a6ff;
             text-align: center;
             padding: 1rem 0;
         }
-
-        /* Ensure main content doesn't overlap with the fixed header */
-        main {
-            padding-top: 70px;
-        }
-        /* CSS ends here */
     </style>
+/* Optional: Add custom styles for logo and page-flipper if needed */
+
+</style>
+
+        </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">SpeedBrief</a>
+       <a href="index.html" class="logo">SpeedBrief</a>
         <nav class="navbar">
             <div class="navbar-links">
                 <a href="https://www.toyota.com" target="_blank">Toyota</a>
@@ -102,24 +148,18 @@
         </nav>
         <a href="index.html" class="page-flipper">Back to Main Page</a>
     </header>
+    
 
     <main>
-        <section class="hero">
-            <h1>Welcome to Car News</h1>
-            <p>Exploring the latest automotive trends, reviews, and cutting-edge technology.</p>
-        </section>
-
-        <section class="news-section">
-            <h2>Featured Interviews</h2>
-            <div class="news-grid">
-                <!-- Additional content, ads, or other elements can be included here -->
-            </div>
-        </section>
+        <div id="news-container" class="news-section">
+            <!-- News items will be loaded here by the JavaScript -->
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 SpeedBrief: Quick Car News. All rights reserved.</p>
     </footer>
+
     <script>
         const apiKey = '59bb65928e9647f2ac107b03005259ea';
         const url = `https://newsapi.org/v2/everything?q=automotive&sortBy=publishedAt&apiKey=${apiKey}`;
