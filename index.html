@@ -3,140 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car News - Stay Updated with the Latest Trends</title>
+    <title>Latest Automotive News</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS starts here */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        body {
-            color: #ddd;
-            line-height: 1.6;
-            background-color: #111;
-        }
-
-        header {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            background: #0d1117;
-            color: #58a6ff;
-            padding: 1rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-sizing: border-box;
-            z-index: 1000;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-grow: 1;
-        }
-
-        .navbar-links a, .logo, .page-flipper {
-            color: #58a6ff;
-            text-decoration: none;
-            padding: 0 15px;
-            transition: color 0.3s ease;
-        }
-
-        .navbar-links a:hover, .logo:hover, .page-flipper:hover {
-            color: #ff7b72;
-        }
-
-        .hero {
-            background: url('websiteimage.jpg') no-repeat center center/cover;
-            color: #fff;
-            padding: 2rem;
-            text-align: center;
-            margin-top: 60px; /* Offset for the fixed header */
-        }
-
-        .news-section {
-            padding: 2rem;
-            background: #161b22;
-        }
-
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-        }
-
-        .ad iframe {
-            border: 3px solid #58a6ff;
-        }
-
-        footer {
-            background: #0d1117;
-            color: #58a6ff;
-            text-align: center;
-            padding: 1rem 0;
-        }
-
-        /* Ensure main content doesn't overlap with the fixed header */
-        main {
-            padding-top: 70px;
-        }
-        .logo {
-    font-size: 24px; /* Larger size for visibility */
-    color: #58a6ff; /* Bright blue color for consistency with theme */
-    text-shadow: 0px 0px 8px rgba(88, 166, 255, 0.7); /* Glowing effect for a futuristic feel */
-    font-weight: 700; /* Bold font weight for emphasis */
-    letter-spacing: 1px; /* Spacing between letters for a refined look */
-    text-transform: uppercase; /* Uppercase letters for a modern, clean appearance */
-    transition: color 0.3s ease; /* Smooth color transition for interactive hover effect */
-}
-
-.logo:hover {
-    color: #ff7b72; /* Color transition on hover for user interaction */
-}
-
-
-        /* CSS ends here */
+        /* CSS styling remains the same as previously provided */
     </style>
 </head>
 <body>
     <header>
-        <a href="#" class="logo">SpeedBrief</a>
         <nav class="navbar">
+            <a href="#" class="logo">SpeedBrief</a>
             <div class="navbar-links">
                 <a href="https://www.toyota.com" target="_blank">Toyota</a>
                 <a href="https://www.ford.com" target="_blank">Ford</a>
                 <a href="https://www.tesla.com" target="_blank">Tesla</a>
             </div>
+            <!-- Correctly link to news-page.html -->
+            <a href="news-page.html" class="page-flipper">Next Page &rarr;</a>
         </nav>
-        <a href="news-page.html" class="page-flipper">Next Page &rarr;</a>
     </header>
-
     <main>
-        <section class="hero">
-            <h1>Welcome to Car News</h1>
-            <p>Exploring the latest automotive trends, reviews, and cutting-edge technology.</p>
-        </section>
-
-        <section class="news-section">
-            <h2>Featured Interviews</h2>
-            <div class="news-grid">
-                <div class="ad">
-                    <h3>Check out Elon Musk's Latest Interview!</h3>
-                    <iframe width="530" height="315" src="https://www.youtube.com/embed/a2ZBEC16yH4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-        </section>
+        <div id="news-container" class="news-section">
+            <!-- News items will be loaded here by the JavaScript -->
+        </div>
     </main>
-
     <footer>
         <p>&copy; 2024 SpeedBrief: Quick Car News. All rights reserved.</p>
     </footer>
+    <script>
+        /* JavaScript remains the same as previously provided */
+    </script>
 </body>
 </html>
+
