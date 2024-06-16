@@ -22,3 +22,6 @@ SpeedBrief is a dynamic web platform designed to aggregate and present the lates
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/speedbrief.git
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
